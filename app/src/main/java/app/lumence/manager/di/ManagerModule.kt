@@ -1,0 +1,17 @@
+package app.lumence.manager.di
+
+import app.lumence.manager.domain.manager.BundleManager
+import app.lumence.manager.domain.manager.DownloadManager
+import app.lumence.manager.domain.manager.InstallManager
+import app.lumence.manager.domain.manager.PathManager
+import app.lumence.manager.domain.manager.PreferenceManager
+import org.koin.core.module.dsl.singleOf
+import org.koin.dsl.module
+
+val managerModule = module {
+    singleOf(::PathManager)
+    singleOf(::DownloadManager)
+    singleOf(::PreferenceManager)
+    singleOf(::InstallManager)
+    singleOf(::BundleManager)
+}
