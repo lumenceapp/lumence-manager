@@ -14,7 +14,7 @@ allprojects {
         mavenCentral()
         google()
         maven("https://git.reseam.app/api/packages/reseam/maven") {
-            mavenContent { includeGroup("app.reseam") }
+            mavenContent { includeGroupAndSubgroups("app.reseam") }
         }
     }
 }

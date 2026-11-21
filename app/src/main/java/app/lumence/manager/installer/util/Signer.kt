@@ -1,7 +1,7 @@
 package app.lumence.manager.installer.util
 
 import android.content.Context
-import app.reseam.sdk.SigningKeyFiles
+import app.reseam.sdk.SigningIdentity
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
@@ -9,8 +9,8 @@ import org.koin.core.component.inject
 object Signer : KoinComponent {
     private val context by inject<Context>()
 
-    val keyFiles: SigningKeyFiles by lazy {
-        SigningKeyFiles(
+    val identity: SigningIdentity by lazy {
+        SigningIdentity.Files(
             key = context.filesDir.resolve("signing.pk8").absolutePath,
             cert = context.filesDir.resolve("signing.der").absolutePath,
         )

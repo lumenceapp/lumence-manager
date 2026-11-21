@@ -22,6 +22,7 @@ import app.lumence.manager.installer.step.download.DownloadLibsStep
 import app.lumence.manager.installer.step.download.DownloadModStep
 import app.lumence.manager.installer.step.download.DownloadResourcesStep
 import app.lumence.manager.installer.util.Logger
+import app.lumence.manager.installer.util.deviceAbis
 import app.lumence.manager.installer.util.Signer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -53,10 +54,11 @@ class PatchStep(
             apkPath = baseApk.absolutePath,
             splitPaths = listOf(libsApk, langApk, resApk).map { it.absolutePath },
             bundlePaths = listOf(bundle.file.absolutePath),
+            deviceAbis = deviceAbis(),
             trust = Trust(keys = listOf(bundle.signer)),
             selection = selection(module),
             output = PatchOutput.SplitDir(outputDir.absolutePath),
-            signing = Signer.keyFiles,
+            signing = Signer.identity,
         )
 
         val outcome = withContext(Dispatchers.IO) {
@@ -83,6 +85,7 @@ class PatchStep(
 
     private fun Logger.log(event: RunEvent) = when (event) {
         is RunEvent.Info -> i(event.message)
+        is RunEvent.PhaseStarted -> d("Phase ${event.phase}")
         is RunEvent.PatchStarted -> d("Applying ${event.patch}")
         is RunEvent.PatchLog -> when (event.field0.level) {
             LogLevel.DEBUG -> d(event.field0.message)

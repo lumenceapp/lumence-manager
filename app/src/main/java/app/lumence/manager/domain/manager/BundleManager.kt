@@ -12,6 +12,7 @@ import app.reseam.sdk.Trust
 import app.reseam.sdk.inspect
 import app.lumence.manager.BuildConfig
 import app.lumence.manager.domain.repository.RestRepository
+import app.lumence.manager.installer.util.deviceAbis
 import app.lumence.manager.network.dto.Release
 import app.lumence.manager.network.utils.dataOrNull
 import app.lumence.manager.utils.DiscordVersion
@@ -108,6 +109,7 @@ class BundleManager(
             InspectRequest(
                 splitPaths = emptyList(),
                 bundlePaths = listOf(file.absolutePath),
+                deviceAbis = deviceAbis(),
                 trust = Trust(keys = listOfNotNull(BuildConfig.BUNDLE_PUBLIC_KEY.takeIf { release != null })),
             )
         )
