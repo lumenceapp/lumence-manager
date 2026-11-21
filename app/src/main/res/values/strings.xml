@@ -152,7 +152,6 @@
 
 
     <string name="label_github">GitHub</string>
-    <string name="label_discord">Discord</string>
 
     <string name="battery_opt_title">Battery Optimization</string>
     <string name="battery_opt_description">Disabling battery optimization is required to keep downloads running reliably in the background or when the screen is off.</string>

@@ -29,7 +29,6 @@ android {
         buildConfigField("String", "REPO", "\"lumenceapp/lumence\"")
         buildConfigField("String", "BUNDLE_PUBLIC_KEY", "\"$patchesPublicKey\"")
         buildConfigField("String", "ORG_LINK", "\"https://github.com/lumenceapp\"")
-        buildConfigField("String", "INVITE_LINK", "\"https://discord.com/invite/dtBTQHYSx4\"")
         buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"app.lumence\"")
         buildConfigField("int", "MODDED_APP_ICON", "0xFFFFD60A")
         buildConfigField("int", "MODDED_APP_ICON_ALPHA", "0xFFFBB33C")

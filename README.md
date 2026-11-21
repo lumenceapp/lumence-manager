@@ -7,12 +7,6 @@
   <p align="center">Install and update <a href="https://github.com/lumenceapp/lumence">Lumence</a> on Android, a client modification for Discord mobile.</p>
   <br>
   <div align="center">
-    <a href="https://discord.com/invite/dtBTQHYSx4">
-      <picture>
-          <source height="32px" media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/13122796/178032563-d4e084b7-244e-4358-af50-26bde6dd4996.png" />
-          <img height="32px" src="https://user-images.githubusercontent.com/13122796/178032563-d4e084b7-244e-4358-af50-26bde6dd4996.png" />
-      </picture>
-    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://github.com/lumenceapp">
       <picture>
           <source height="32px" media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/dMMmCrW/Git-Hub-Mark.png" />
