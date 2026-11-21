@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/lumenceapp/lumence-manager/compare/v1.0.2...v1.0.3) (2026-11-21)
+
+
+### Bug Fixes
+
+* prevent duplicate commit keys ([a67e1ed](https://github.com/lumenceapp/lumence-manager/commit/a67e1ed88efb7a7876f5bcbe98050a02c0469719))
+
 ## [1.0.2](https://github.com/lumenceapp/lumence-manager/compare/v1.0.1...v1.0.2) (2026-11-21)
 
 
